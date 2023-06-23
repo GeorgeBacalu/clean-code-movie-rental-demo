@@ -53,4 +53,9 @@ public class CustomerRepositoryImpl implements CustomerRepository {
             throw new ResourceNotFoundException(String.format(CUSTOMER_NOT_FOUND, customer.getName()));
         }
     }
+
+    @Override
+    public void deleteAll() {
+        customers.clear();
+    }
 }

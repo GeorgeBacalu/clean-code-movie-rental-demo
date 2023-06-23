@@ -25,7 +25,7 @@ public class RentalReportServiceImpl implements RentalReportService {
                     .append("\n"));
         result.append("Amount owed: ")
               .append(customerService.getTotalPrice(customerName))
-              .append("\nYou earned: ")
+              .append("\nYou earned ")
               .append(customerService.getFrequentRenterPoints(customerName))
               .append(" frequent renter points");
         return result.toString();
@@ -55,13 +55,13 @@ public class RentalReportServiceImpl implements RentalReportService {
                     .append(customerService.getRentalPrice(rental))
                     .append("</li>")
                     .append(System.lineSeparator()));
-        result.append("\t</ul>")
+        result.append("\t</ul>\n")
               .append("\t<h3>Amount owed: ")
               .append(customerService.getTotalPrice(customerName))
               .append("</h3>\n")
-              .append("\t<h3>You earned: ")
+              .append("\t<h3>You earned ")
               .append(customerService.getFrequentRenterPoints(customerName))
-              .append(" frequent renter points");
+              .append(" frequent renter points</h3>");
         result.append("\n  </body>").append("\n</html>");
         return result.toString();
     }

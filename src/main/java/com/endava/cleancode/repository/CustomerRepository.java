@@ -13,4 +13,6 @@ public interface CustomerRepository {
     Customer saveOrUpdate(Customer customer);
 
     void delete(Customer customer);
+
+    void deleteAll();
 }
