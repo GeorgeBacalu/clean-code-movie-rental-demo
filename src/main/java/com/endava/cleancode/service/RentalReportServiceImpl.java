@@ -51,9 +51,8 @@ public class RentalReportServiceImpl implements RentalReportService {
                     .append(rental.getMovie().getTitle())
                     .append(": ")
                     .append(customerService.getRentalPrice(rental))
-                    .append("</li>")
-                    .append(System.lineSeparator()));
-        result.append("    </ul>")
+                    .append("</li>\n"));
+        result.append("    </ul>\n")
               .append("    <h3>Amount owed: ")
               .append(customerService.getTotalPrice(customerName))
               .append("</h3>\n")
